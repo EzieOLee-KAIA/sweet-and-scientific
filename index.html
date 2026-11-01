@@ -87,14 +87,14 @@
         </section>
         <section>
             <h2>Find Your Treat</h2>
-            <button class="pick-btn" data-benefit="Antioxidant-rich, thanks to the rooibos and cinnamon.">Milk Tart Cups</button>
-            <button class="pick-btn" data-benefit="Great for relaxing, thanks to the chamomile and lavender.">Cupcakes</button>
-            <button class="pick-btn" data-benefit="Refreshing and calming, with sage and lavender.">Lemon Bars</button>
+            <button class="pick-btn" data-benefit="Antioxidant-rich, thanks to the rooibos and cinnamon." data-image="milk-tart.jpeg">Milk Tart Cups</button>
+            <button class="pick-btn" data-benefit="Great for relaxing, thanks to the chamomile and lavender." data-image="cupcake.jpeg">Cupcakes</button>
+            <button class="pick-btn" data-benefit="Refreshing and calming, with sage and lavender." data-image="lemon-bar.jpeg">Lemon Bars</button>
             <p id="pick-result">Pick a treat to see how it benefits your student needs.</p>
         </section>
         <section>
             <h2>Our Poster</h2>
-            <img class="poster" src="flyer.jpeg" alt="Sweet And Scientific poster listing our products, prices and stall details.">
+            <img class="poster" id="poster-img" src="flyer.jpeg" alt="Sweet And Scientific poster listing our products, prices and stall details.">
         </section>
         <section>
             <h2>Find Us</h2>
@@ -115,9 +115,12 @@
             benefitsButton.addEventListener("click", toggleBenefits);
             const pickButtons = document.querySelectorAll(".pick-btn");
             const pickResult = document.getElementById("pick-result");
+            const posterImg = document.getElementById("poster-img");
             for (const button of pickButtons) {
                 button.addEventListener("click", function() {
                     pickResult.textContent = button.dataset.benefit;
+                    posterImg.src = button.dataset.image;
+                    console.log();
                 });
             }
         </script>
