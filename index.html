@@ -36,10 +36,15 @@
                 padding: 20px;
                 border-radius: 16px;
                 margin: 20px 0;
+                animation: fadeIn 2.25s;
             }
 
             .poster {
                 width: 100%;
+            }
+
+            .logo {
+                animation: float 3s ease-in-out infinite alternate;
             }
 
             button {
@@ -49,16 +54,48 @@
                 padding: 10px 20px;
                 border-radius: 8px;
                 cursor: pointer;
+                transition: background-color 0.3s, transform 0.3s;
             }
 
             button:hover {
                 background-color: #7a3e12;
+                transform: translateY(-3px);
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes float {
+                from {
+                    transform: translateY(0);
+                } 
+                to {
+                    transform: translateY(-10px);
+                }
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+                .logo {
+                    animation: none;
+                }
+
+                .section {
+                    animation: none;
+                }
             }
         </style>
     </head>
     <body>
         <h1>Sweet &amp; Scientific</h1>
-        <img src="logo.jpeg" alt="Sweet and Scientific logo, a flask holding lavender, sage, and chamomile." >
+        <img class="logo" src="logo.jpeg" alt="Sweet and Scientific logo, a flask holding lavender, sage, and chamomile." >
         <p>Botanical bites, sweet delights</p>
         <section>
             <h2>About Us</h2>
