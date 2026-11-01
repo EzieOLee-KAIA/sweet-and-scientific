@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="utf-8">
+        <title>Sweet and Scientific</title>
+        <style>
+            body {
+                background-color: #fde3b8;
+                color: #7a3e12;
+                text-align: center;
+                font-family: Georgia, serif;
+                max-width: 700px;
+                margin: 0 auto;
+            }
+
+            img {
+                width: 250px;
+            }
+
+            h1, h2, h3 {
+                color: #b0601f;
+            }
+
+            a {
+                color: #a0420d;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            section {
+                background-color: #ffc680;
+                padding: 20px;
+                border-radius: 16px;
+                margin: 20px 0;
+            }
+
+            .poster {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Sweet &amp; Scientific</h1>
+        <img src="logo.jpeg" alt="Sweet and Scientific logo, a flask holding lavender, sage, and chamomile." >
+        <p>Botanical bites, sweet delights</p>
+        <section>
+            <h2>About Us</h2>
+            <p>Sweet &amp; Scientific is a student micro-enterprise by 10 Eduvos Tygervalley students for the module Bioentrepreneurship. We use South African indigenous plants to create healthy, calming desserts for stressed students.</p>
+        </section>
+        <section>
+            <h2>Our Aim</h2>
+            <p>We aim to establish a viable student-run micro-enterprise that provides affordable, functional snacks using South African indigenous plants while proving bioentrepreneurship viability and building practical business skills.</p>
+            <h3>Objectives</h3>
+            <ul>
+                <li>Apply entrepreneurship principles</li>
+                <li>Demonstrate lab management skills</li>
+                <li>Achieve profitability</li>
+                <li>Promote sustainable use of indigenous biodiversity</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Our Products</h2>
+            <ul>
+                <li>Cinnamon &amp; Rooibos Milk Tart Cups: R12</li>
+                <li>Lavender &amp; Chamomile Cupcakes: R15</li>
+                <li>Sage &amp; Lavender Lemon Bars: R12</li>
+            </ul>
+            <button id="benefits-btn">Why these ingredients?</button>
+            <p id="benefits">Rooibos and cinnamon are antioxidant-rich. Chamomile and lavender help you relax. Sage and lavender make the lemon bars refreshing and calming.</p>
+        </section>
+        <section>
+            <h2>Our Poster</h2>
+            <img class="poster" src="flyer.jpeg" alt="Sweet And Scientific poster listing our products, prices and stall details.">
+        </section>
+        <section>
+            <h2>Find Us</h2>
+            <p>Visit our stall at Eduvos Tygervalley on November 3rd. Follow us on Instagram: <a href="https://www.instagram.com/sweetandscientific/">@sweetandscientific</a></p>
+        </section>
+        <script>
+            const benefitsButton = document.getElementById("benefits-btn");
+            const benefitsText = document.getElementById("benefits");
+            benefitsText.style.display = "none";
+            function toggleBenefits() {
+                if (benefitsText.style.display === "none") {
+                    benefitsText.style.display = "block";
+                } else {
+                    benefitsText.style.display = "none";
+                }
+            } 
+            benefitsButton.addEventListener("click", toggleBenefits);
+        </script>
+    </body> 
+</html>
