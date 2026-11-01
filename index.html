@@ -90,6 +90,7 @@
             <button class="pick-btn" data-benefit="Antioxidant-rich, thanks to the rooibos and cinnamon." data-image="milk-tart.jpeg">Milk Tart Cups</button>
             <button class="pick-btn" data-benefit="Great for relaxing, thanks to the chamomile and lavender." data-image="cupcake.jpeg">Cupcakes</button>
             <button class="pick-btn" data-benefit="Refreshing and calming, with sage and lavender." data-image="lemon-bar.jpeg">Lemon Bars</button>
+            <button class="pick-btn" data-benefit="Pick a treat to see how it benefits your student needs." data-image="flyer.jpeg">Show Poster</button>
             <p id="pick-result">Pick a treat to see how it benefits your student needs.</p>
         </section>
         <section>
@@ -120,7 +121,6 @@
                 button.addEventListener("click", function() {
                     pickResult.textContent = button.dataset.benefit;
                     posterImg.src = button.dataset.image;
-                    console.log();
                 });
             }
         </script>
